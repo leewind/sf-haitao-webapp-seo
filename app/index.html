@@ -32,25 +32,7 @@
                 <h3 class="text-muted">sf haitao webapp seo</h3>
             </div>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
-            </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-
-                </div>
-            </div>
+            <div class="row" id="todos"></div>
 
             <div class="footer">
                 <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -88,10 +70,18 @@
         <script src="../bower_components/bootstrap/js/scrollspy.js"></script>
         <script src="../bower_components/bootstrap/js/collapse.js"></script>
         <script src="../bower_components/bootstrap/js/tab.js"></script>
+
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="../bower_components/canjs/can.jquery.js"></script>
+        <script type="text/javascript" src="../bower_components/canjs/can.fixture.js"></script>
+        <script type="text/javascript" src="../bower_components/canjs/can.ejs.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/simulation/simulation.js"></script>
+        <script type="text/javascript" src="scripts/models/todo.model.js"></script>
+        <script type="text/javascript" src="scripts/controls/todo.ctrl.js"></script>
+        <script type="text/javascript" src="scripts/launcher.js"></script>
         <!-- endbuild -->
 </body>
 </html>

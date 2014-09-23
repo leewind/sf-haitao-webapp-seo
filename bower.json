@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "jquery": "~1.11.0"
+    "jquery": "~1.11.0",
+    "canjs": "~2.1.3"
   },
   "devDependencies": {}
 }
