@@ -18,7 +18,7 @@ router.get('/:id', function(req, res) {
   sfRequest.get({url: 'https://api.douban.com/v2/book/'+bookId, method: 'GET'})
     .then(function (data) {
 
-      Promise.all([sfFile.read('app/index.html', 'utf8'), sfFile.read('app/templates/bookinfo.ejs', 'utf8')])
+      Promise.all([sfFile.read('app/index.html', 'utf8'), sfFile.read('views/bookinfo.ejs', 'utf8')])
         .then(function (files) {
           var html = files[0];
           var template = files[1];

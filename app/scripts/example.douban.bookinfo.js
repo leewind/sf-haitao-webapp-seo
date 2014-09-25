@@ -27,7 +27,7 @@ BookInfoCtrl = can.Control({
   render: function (data) {
     var status = this.element.attr('data-status');
     if (status !== 'ready') {
-      this.element.html(can.view('/app/templates/bookinfo.ejs', {
+      this.element.html(can.view('/views/bookinfo.ejs', {
         bookinfo: this.options.bookinfo
       }));
     };
@@ -36,7 +36,7 @@ BookInfoCtrl = can.Control({
   supplement: function () {
     var id = can.route.attr('id');
     if (id) {
-      this.element.append(can.view('/app/templates/bookinfo.supplement.ejs', {
+      this.element.append(can.view('/views/bookinfo.supplement.ejs', {
         id: id
       }));
     }
