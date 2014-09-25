@@ -61,7 +61,7 @@ EXAMPLE (案例)
 #!case/29
 ```
 
-HOWTO
+HOWTO (如何去做)
 ----
 
 0. 需要安装NodeJS环境和Bower加载器
