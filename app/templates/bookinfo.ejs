@@ -1,11 +1,18 @@
 <div>
-  <h3><%= bookinfo.attr('author') %></h3>
+  <h3><%= bookinfo.title %></h3>
   <div>
-    <%= bookinfo.attr('summary') %>
+    <span>作者:</span>
+    <% bookinfo.author.forEach(function(name){ %>
+      <span class="label label-danger"><%= name%></span>
+    <% }) %>
+  </div>
+  <br>
+  <div>
+    <%= bookinfo.summary %>
   </div>
   <div>
     <% bookinfo.tags.forEach(function(tag){ %>
-      <span class="label label-success"><%= tag.attr('name')%></span>
+      <span class="label label-success"><%= tag.name%></span>
     <% }) %>
   </div>
   <br>
