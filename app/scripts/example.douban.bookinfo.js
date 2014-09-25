@@ -21,7 +21,7 @@ BookInfoCtrl = can.Control({
    */
   init: function() {
     this.render();
-    this.suppliment();
+    this.supplement();
   },
 
   render: function (data) {
@@ -33,10 +33,10 @@ BookInfoCtrl = can.Control({
     };
   },
 
-  suppliment: function () {
+  supplement: function () {
     var id = can.route.attr('id');
     if (id) {
-      this.element.append(can.view('/app/templates/bookinfo.suppliment.ejs', {
+      this.element.append(can.view('/app/templates/bookinfo.supplement.ejs', {
         id: id
       }));
     }
