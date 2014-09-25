@@ -1,7 +1,0 @@
-<ul class="clearfix">
-  <% list(todos, function(todo){ %>
-    <li class="span8" <%= (el)-> el.data('todo', todo) %>>
-      <%== can.view.render('scripts/templates/todo.view.ejs', { todo: todo }) %>
-    </li>
-  <% }) %>
-</ul>

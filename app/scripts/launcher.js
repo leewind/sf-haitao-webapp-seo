@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  $.when(TodoModel.findAll()).then(function (data) {
-    var todos = data;
+  $.when(BookInfo.findOne()).then(function (data) {
 
-    var todoCtrl = new TodoCtrl('#todos', {
-      todos: todos
+    var bookinfo = data;
+
+    var bookInfoCtrl = new BookInfoCtrl('#info', {
+      bookinfo: bookinfo
     });
   });
 });

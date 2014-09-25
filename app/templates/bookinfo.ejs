@@ -1,0 +1,12 @@
+<div>
+  <h3><%= bookinfo.attr('author') %></h3>
+  <div>
+    <%= bookinfo.attr('summary') %>
+  </div>
+  <div>
+    <% bookinfo.tags.forEach(function(tag){ %>
+      <span class="label label-success"><%= tag.attr('name')%></span>
+    <% }) %>
+  </div>
+  <br>
+</div>
