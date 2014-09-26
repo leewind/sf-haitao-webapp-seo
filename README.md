@@ -89,9 +89,11 @@ DISCUSS (讨论)
 
 思考这样一个问题：**既然不纠结于服务端和浏览器端代码一致，那么是不是有可能用其他的替代Nodejs来做服务端渲染的工作，比如：Sprint MVC、.Net MVC、Python Tornado？**
 
-这个问题的关键点是如何解析`ejs`模板！但是很可惜，我没有找到一个其他语言对`ejs`模板的支持。
+在`CanJS`中默认推荐两种模板：`ejs`和`mustache`。我没有找到其他语言对于`ejs`模板的支持，但是`mustache`在其他语言上的应用做的非常的好，具体可以参考[mustache官方站点](http://mustache.github.io/)
 
-那反过来想，有没有其他的语言模板可以在Nodejs环境下可以使用的，然后我找到了[Velocity.js](http://git.shepherdwind.com/velocity.js/)，我想如果前端CanJS可以兼容`Velocity.js`的模板，那么在做渲染的时候，可能我有第二套方案：用Java Velocity去做`render`逻辑的渲染！这是我下一步实践的目标。
+那反过来想，有没有其他的语言模板可以在Nodejs环境下可以使用的，然后我找到了[Velocity.js](http://git.shepherdwind.com/velocity.js/)，我想如果前端CanJS可以兼容`Velocity.js`的模板，那么在做渲染的时候，可能我有第二套方案：用Java Velocity去做`render`逻辑的渲染！
+
+对于`mustache`用于多语言平台的拓展和`Velocity`对`CanJS`的扩展是我下一步的实践目标
 
 REFERENCE (参考)
 ----------------
