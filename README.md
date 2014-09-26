@@ -38,7 +38,7 @@ TODO (做了什么)
 
 ![](http://mdocshare.qiniudn.com/43fc8f0bc7b02c2c16768e4dd7cdb657.png)
 
-如上图所示，默认的什么周期只有`start`和`end`两个阶段，我们显示的加入了`render`和`supplement`两个阶段。
+如上图所示，默认的生命周期只有`start`和`end`两个阶段，我们显示的加入了`render`和`supplement`两个阶段。
 
 + `render`定义为主渲染阶段，这部分可以在浏览器端进行渲染，也可以在服务端端进行渲染，服务端渲染完成之后，会在根节点上加入`data-status="ready"`的属性，来标示渲染完毕，当浏览器检测到这个属性时，就不会重复渲染。
 + `supplement`定义为补充渲染阶段，这部分在浏览器端进行渲染，其数据参数通过`hash`被传入
@@ -84,8 +84,17 @@ HOWTO (如何去做)
 
 **项目地址**： [https://github.com/leewind/sf-haitao-webapp-seo](https://github.com/leewind/sf-haitao-webapp-seo)
 
-参考
-----
+DISCUSS (讨论)
+--------------
+
+思考这样一个问题：**既然不纠结于服务端和浏览器端代码一致，那么是不是有可能用其他的替代Nodejs来做服务端渲染的工作，比如：Sprint MVC、.Net MVC、Python Tornado？**
+
+这个问题的关键点是如何解析`ejs`模板！但是很可惜，我没有找到一个其他语言对`ejs`模板的支持。
+
+那反过来想，有没有其他的语言模板可以在Nodejs环境下可以使用的，然后我找到了[Velocity.js](http://git.shepherdwind.com/velocity.js/)，我想如果前端CanJS可以兼容`Velocity.js`的模板，那么在做渲染的时候，可能我有第二套方案：用Java Velocity去做`render`逻辑的渲染！这是我下一步实践的目标。
+
+REFERENCE (参考)
+----------------
 
 + [深入详解前端轻量级MVC框架新贵CanJS(1)](http://www.iunbug.com/archives/2012/06/14/360.html)
 + [也谈基于NodeJS的全栈式开发（基于NodeJS的前后端分离）](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/)
